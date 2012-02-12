@@ -134,7 +134,7 @@
             div.style.zIndex = 200;
             document.body.appendChild(div);
 
-            div.innerHTML = "Hello";
+            div.innerHTML = "Happy Valentine's Day!!";
             div.style.border = "solid red 2px";
             div.style.backgroundColor = "#c00";
             div.style.border = "solid black 1px";
@@ -199,13 +199,7 @@
         document.body.appendChild(controls);
 
         controls.innerHTML =
-            "Koch snowflake fractals from " + 
-            "<i><a style='font:inherit; color:#fff' " +
-            "href='http://oreilly.com/catalog/0636920016045/'>" +
-            "Canvas Pocket Reference</a></i>.   " +
-            "<a style='font:inherit; color:#fff' " +
-            "href='http://www.davidflanagan.com/2010/12/let-it-snow.html'>" +
-            "Learn how it works</a>.   Happy Holidays! ";
+            "Have a great day!";
         var stopbutton = document.createElement("button");
         stopbutton.innerHTML = "Stop";
         controls.appendChild(stopbutton);
