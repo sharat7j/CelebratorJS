@@ -124,6 +124,7 @@
             document.body.appendChild(img);
             flakes.push({elt:img, x:x, y:y, vy:4});
             
+        if(rand(10) == 1) {
             var img = document.createElement("img");
             img.src = cover1.src;
             var scale = Math.random()/2 + .25;
@@ -137,7 +138,7 @@
             img.style.zIndex = 200;
             document.body.appendChild(img);
             flakes.push({elt:img, x:x, y:y, vy:4});
-
+          }
             // and drop a message, too
             var div = document.createElement("div");
             div.style.width = "120px";
