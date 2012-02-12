@@ -71,6 +71,8 @@
     var sqrt3_2 = Math.sqrt(3)/2;  // Height of an equilateral triangle
     var flakes = [];               // Things that are dropping
     var cover = new Image();
+    var cover1=new Image();
+    cover1.src="http://i415.photobucket.com/albums/pp236/Keefers_/Animated/puppy.gif";
     cover.src = "http://cloud.github.com/downloads/sharat7j/xyz/rosered.gif";
     var coverwidth = 180, coverheight = 296;
     var scrollspeed = 80;   // How often we animate things
@@ -110,6 +112,20 @@
             // drop the cover image
             var img = document.createElement("img");
             img.src = cover.src;
+            var scale = Math.random()/2 + .25;
+            img.width = Math.round(coverwidth * scale);
+            img.height = Math.round(coverheight*scale);
+            img.style.position = "absolute";
+            var x = rand(window.innerWidth - img.width - 150);
+            var y = window.pageYOffset;
+            img.style.top = y + "px";
+            img.style.left = x + "px";
+            img.style.zIndex = 200;
+            document.body.appendChild(img);
+            flakes.push({elt:img, x:x, y:y, vy:4});
+            
+            var img = document.createElement("img");
+            img.src = cover1.src;
             var scale = Math.random()/2 + .25;
             img.width = Math.round(coverwidth * scale);
             img.height = Math.round(coverheight*scale);
