@@ -216,7 +216,7 @@
         document.body.appendChild(controls);
 
         controls.innerHTML =
-            "Millions will drop,like my heart beats-nonstop,so let it shower you until the day I  ";
+            "Millions will drop,like my heart beats-nonstop,so let it shower you till the day I  ";
         var stopbutton = document.createElement("button");
         stopbutton.innerHTML = "Stop";
         controls.appendChild(stopbutton);
