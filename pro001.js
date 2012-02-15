@@ -29,43 +29,8 @@
 
     // Draw a level-n Koch Snowflake fractal in the context c,
     // with lower-left corner at (x,y) and side length len.
-    function snowflake(c, n, x, y, len) {
-        c.save();           // Save current transformation
-        c.translate(x,y);   // Translate to starting point
-        c.moveTo(0,0);      // Begin a new subpath there
-        leg(n);             // Draw the first leg of the fractal
-        c.rotate(-120*deg); // Rotate 120 degrees anticlockwise
-        leg(n);             // Draw the second leg
-        c.rotate(-120*deg); // Rotate again.
-        leg(n);             // Draw the final leg
-        c.closePath();      // Close the subpath
-        c.restore();        // Restore original transformation
-
-        // Draw a single leg of a level-n Koch snowflake.
-        // This function leaves the current point at the end of
-        // the leg it has drawn and translates the coordinate
-        // system so the current point is (0,0). This means you
-        // can easily call rotate() after drawing a leg.
-        function leg(n) {
-            c.save();               // Save current transform
-            if (n == 0) {           // Non-recursive case:
-                c.lineTo(len, 0);   //   Just a horizontal line
-            }
-            else { // Recursive case:           _  _
-                   //     draw 4 sub-legs like:  \/
-                c.scale(1/3,1/3);   // Sub-legs are 1/3rd size
-                leg(n-1);           // Draw the first sub-leg
-                c.rotate(60*deg);   // Turn 60 degrees clockwise
-                leg(n-1);           // Draw the second sub-leg
-                c.rotate(-120*deg); // Rotate 120 degrees back
-                leg(n-1);           // Third sub-leg
-                c.rotate(60*deg);   // Back to original heading
-                leg(n-1);           // Final sub-leg
-            }
-            c.restore();            // Restore the transform
-            c.translate(len, 0);    // Translate to end of leg
-        }
-    }
+   
+   
 
     var deg = Math.PI/180;         // For converting degrees to radians
     var sqrt3_2 = Math.sqrt(3)/2;  // Height of an equilateral triangle
@@ -99,7 +64,7 @@
         var c = canvas.getContext("2d");
         c.strokeStyle = "rgba(0,0,0,0.5)";
         c.fillStyle = "rgba(255,255,255,0.75)";
-     //   snowflake(c,order,0,Math.floor(sqrt3_2*size),size);
+     
         c.fill();
         c.stroke();
 
