@@ -60,13 +60,7 @@
         canvas.style.top = y + "px";
         canvas.style.zIndex = 100 + rand(100);
 
-        // Draw a translucent snowflake into the transparent canvas
-        var c = canvas.getContext("2d");
-        c.strokeStyle = "rgba(0,0,0,0.5)";
-        c.fillStyle = "rgba(255,255,255,0.75)";
-     
-        c.fill();
-        c.stroke();
+        
 
         // Add the canvas to the document and to our array of snowflakes
         document.body.appendChild(canvas);
@@ -133,11 +127,11 @@
     function moveSnowflakes() {
         var maxy = window.pageYOffset + window.innerHeight;
         var i = 0;
-        while(i < flakes.length) {  // Loop through the array of flakes
+        while(i < flakes.length) {  // Loop through the array of images
             var flake = flakes[i];
             flake.y += flake.vy;
             if (flake.y > maxy) {
-                // The flake has scrolled off, so get rid of it
+                // The image has scrolled off, so get rid of it
                 document.body.removeChild(flake.elt);
                 flakes.splice(i, 1);
                 continue;
