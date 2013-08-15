@@ -174,7 +174,7 @@
         document.body.appendChild(controls);
 
         controls.innerHTML =
-            "<i>&nbsp;&nbsp;&nbsp; Millions will drop,like my heart beats-nonstop,and continue to amuse you till you say</i>  ";
+            "<i>&nbsp;&nbsp;&nbsp; Because true Indians will never </i>  ";
         var stopbutton = document.createElement("button");
         stopbutton.innerHTML = "Stop";
         controls.appendChild(stopbutton);
