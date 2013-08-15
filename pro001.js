@@ -109,7 +109,7 @@
             div.style.zIndex = 200;
             document.body.appendChild(div);
 
-            div.innerHTML = "Happy Valentine's Day!!";
+            div.innerHTML = "Happy Independence Day!!";
             div.style.border = "solid red 2px";
             div.style.backgroundColor = "#c00";
             div.style.border = "solid black 1px";
