@@ -36,8 +36,8 @@
     var flakes = [];               // Things that are dropping
     var cover = new Image();
     var cover1=new Image();
-    cover1.src="http://i415.photobucket.com/albums/pp236/Keefers_/Animated/puppy.gif";
-    cover.src = "http://cloud.github.com/downloads/sharat7j/xyz/rosered.gif";
+    //cover1.src="http://i415.photobucket.com/albums/pp236/Keefers_/Animated/puppy.gif";
+    cover.src = "http://www.crossed-flag-pins.com/animated-flag-gif/gifs/India_240-animated-flag-gifs.gif";
     var coverwidth = 180, coverheight = 296;
     var scrollspeed = 80;   // How often we animate things
     var snowspeed = 500;    // How often we add a new snowflake
